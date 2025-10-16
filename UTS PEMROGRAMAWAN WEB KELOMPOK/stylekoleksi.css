@@ -1,0 +1,151 @@
+
+       /* CSS untuk Halaman Parfum (about.html) yang Disingkat */
+/* Reset dan General Styling */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+:root{
+    --primary-color: #333;--secondary-color: #555;--text-light: #f4f4f4;
+    --background-dark: #161616; /* Menggunakan #161616 agar konsisten dengan sebelumnya */
+    --button-bg: #fff;--button-text: #333;--accent-color: #a37627;
+}
+html{scroll-behavior:smooth}
+body{background-color:var(--background-dark);color:var(--text-light);line-height:1.6}
+
+/* Header dan Navigasi */
+header{
+    background-color: #000;padding: 15px 50px;display: flex;justify-content: space-between;
+    align-items: center;position: fixed;width: 100%;z-index: 1000;
+}
+.logo a{font-size:24px;font-weight:bold;color:var(--text-light);text-decoration:none}
+.header-right-nav{display:flex;align-items:center;gap:30px}
+.header-right-nav nav ul{list-style:none;display:flex;gap:30px}
+.header-right-nav nav ul li a{
+    color:var(--text-light);text-decoration:none;font-size:14px;text-transform:uppercase;
+    letter-spacing:1px;padding:5px 0;transition:color .3s;
+}
+.header-right-nav nav ul li a:hover{color:#aaa}
+.header-icons{display:flex;align-items:center;gap:20px}
+.header-icons a{color:var(--text-light);text-decoration:none}
+.header-icons .icon{font-size:20px;cursor:pointer;transition:color .3s}
+.header-icons .icon:hover{color:#aaa}
+
+
+/* Konten Halaman Umum */
+.content-section {
+    padding: 100px 50px;min-height: 100vh;background-color: #161616; 
+}
+.content-section h1 {
+    text-align: center;margin-bottom: 50px;font-size: 36px;color: var(--text-light);
+}
+
+/* Halaman Parfum (Grid Produk) */
+.perfume-grid {
+    display: grid;grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;max-width: 1200px;margin: 0 auto;
+}
+.perfume-card {
+    background-color: #ffffff;padding: 20px;border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--accent-color);
+    display: flex;flex-direction: column;align-items: center;
+}
+.perfume-card img {
+    max-width: 100%;height: 200px;object-fit: contain;
+    margin-bottom: 15px;border-radius: 4px;
+}
+.perfume-card h3, .perfume-card h4, .perfume-card p {
+    color: #000000;text-align: center;
+}
+.perfume-card h3 {
+    margin-bottom: 10px;font-size: 22px;
+}
+.perfume-card h4 {
+    margin-top: 15px;font-size: 15px;
+}
+.perfume-card p {
+    font-size: 14px;margin-bottom: 15px;
+}
+
+/* Daftar Notes (Aroma) */
+.notes-list {
+    list-style: none;font-size: 13px;margin-top: 5px;
+    padding-left: 0;text-align: left;width: 100%;color: #000000;
+}
+.notes-list li {
+    margin-bottom: 3px;color: #000000;
+}
+
+/* ====== POP-UP KOLEKSI (lebih besar + gradasi elegan) ====== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at center, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.95));
+  backdrop-filter: blur(6px) saturate(1.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Kartu pop-up yang lebih besar & elegan */
+.modal-card {
+  background: linear-gradient(145deg, #1a1a1a 0%, #111 40%, #201a12 100%);
+  color: #f4f4f4;
+  border-radius: 18px;
+  padding: 40px 50px;
+  width: min(800px, 90vw);
+  box-shadow: 0 0 25px rgba(163, 139, 93, 0.3), 0 0 60px rgba(163, 139, 93, 0.1);
+  border: 1px solid rgba(163, 139, 93, 0.4);
+  transform: scale(0.85) translateY(25px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.modal.show .modal-card {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Tombol tutup */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-color);
+  background: transparent;
+  color: var(--accent-color);
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: var(--accent-color);
+  color: #111;
+  box-shadow: 0 0 20px rgba(163, 139, 93, 0.5);
+}
+
+/* Teks di dalam modal */
+.modal-card h4 {
+  font-size: 26px;
+  text-align: center;
+  color: #e3c27b;
+  margin-bottom: 16px;
+  text-shadow: 0 0 10px rgba(163, 139, 93, 0.4);
+}
+
+.modal-card p {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #d9d9d9;
+}

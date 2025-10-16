@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hubungi Kami - SCENTMALL</title>
+  <meta name="description" content="Hubungi SCENTMALL untuk pertanyaan atau pemesanan parfum.">
+  <link rel="stylesheet" href="stylecontact.css">
+  <!-- ikon (dipakai oleh header) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="index.html">ARVEN PARFUME</a></div>
+    <div class="header-right-nav">
+      <nav>
+        <ul>
+          <li><a href="index.html">BERANDA</a></li>
+          <li><a href="about.html">TENTANG KAMI</a></li>
+          <li><a href="koleksi.html">KOLEKSI</a></li>
+          <li><a class="active" href="contact.html">KONTAK</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="about.html" aria-label="Cari"><span class="icon"><i class="fas fa-search"></i></span></a>
+        <span class="icon" aria-label="Akun"><i class="fas fa-user"></i></span>
+        <span class="icon" aria-label="Tas Belanja"><i class="fas fa-shopping-bag"></i></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="content-section">
+    <h1>HUBUNGI KAMI</h1>
+    <p>Silakan isi formulir di bawah ini untuk pertanyaan atau pemesanan.</p>
+
+    <!-- Alert global -->
+    <div id="formAlert" class="alert" role="status" aria-live="polite" hidden></div>
+
+    <div class="contact-container" role="form" aria-labelledby="formTitle">
+      <form id="contactForm" novalidate>
+        <h2 id="formTitle" class="form-title">Formulir Kontak</h2>
+
+        <div class="form-group">
+          <label for="name">Nama Lengkap</label>
+          <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" autocomplete="name" required/>
+          <small class="field-error" id="err-name" hidden>Nama tidak boleh kosong.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@contoh.com" autocomplete="email" required/>
+          <small class="field-error" id="err-email" hidden>Email tidak valid.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subjek</label>
+          <input type="text" id="subject" name="subject" placeholder="Judul pesan Anda" required/>
+          <small class="field-error" id="err-subject" hidden>Subjek wajib diisi.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" placeholder="Tulis pesan Anda..." rows="5" required></textarea>
+          <small class="field-error" id="err-message" hidden>Pesan minimal 10 karakter.</small>
+        </div>
+
+        <button type="submit" class="submit-btn ripple">KIRIM PESAN</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="form.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang Kami - ARVEN PERFUME</title>
+  <meta name="description" content="Tentang ARVEN PERFUME — parfum premium dengan nuansa elegan dan mewah.">
+  <link rel="stylesheet" href="styleabout.css">
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="brand"><a href="index.html">ARVEN PERFUME</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="koleksi.html">Koleksi</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <!-- trigger popup -->
+        <h1 class="title-trigger" id="openAboutModal">ARVEN PERFUME</h1>
+
+        <div class="panel" style="margin-top:16px">
+          <p class="lead">
+            ARVEN PERFUME adalah pengetahuan tentang parfum premium yang menghadirkan aroma elegan,
+            berkelas, dan tahan lama untuk setiap pribadi yang ingin mengekspresikan diri melalui keharuman.
+          </p>
+          <p class="muted" style="margin-top:12px">
+            Kami meracik referensi untuk Anda yang suka beli parfum blind buy—membantu Anda menemukan
+            wangi yang paling mewakili diri.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <!-- trigger popup -->
+        <h2 class="title-trigger" id="openContactModal">HUBUNGI KAMI</h2>
+
+        <div class="contact-wrap">
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>Telepon</h3>
+              <p class="muted">Layanan Pelanggan:<br>+62 812-345-6789 (WhatsApp)</p>
+              <button class="btn">Chat WhatsApp</button>
+            </article>
+
+            <article class="contact-card">
+              <h3>Alamat Kantor Pusat</h3>
+              <p class="muted">Jl. Balai Pemuda No. 19–20<br>Tegalsari, Surabaya</p>
+              <span class="badge-gold"><b>Open</b> 10.00–20.00</span>
+            </article>
+
+            <article class="contact-card">
+              <h3>Media Sosial</h3>
+              <p class="muted">Ikuti kami untuk update terbaru.</p>
+              <div class="btn-row">
+                <a class="btn" href="#" aria-label="Instagram">Instagram</a>
+                <a class="btn" href="#" aria-label="TikTok">TikTok</a>
+                <a class="btn" href="#" aria-label="YouTube">YouTube</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== MODALS ===== -->
+  <!-- Modal: About -->
+  <div class="modal-backdrop" id="aboutModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+      <div class="modal-head">
+        <h3 class="modal-title" id="aboutTitle">Tentang ARVEN PERFUME</h3>
+        <button class="btn-close" data-close="#aboutModal" aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="badge-gold">Filosofi <b>Elegan & Tahan Lama</b></p>
+        <p class="modal-text">
+          Kami menghadirkan parfum premium dengan karakter elegan dan minimalis.
+          Setiap aroma kami kurasi agar menyatu dengan kepribadian Anda dan meninggalkan jejak berkarisma.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Contact -->
+  <div class="modal-backdrop" id="contactModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+      <div class="modal-head">
+        <h3 class="modal-title" id="contactTitle">Hubungi Tim ARVEN</h3>
+        <button class="btn-close" data-close="#contactModal" aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="badge-gold">Respons <b>cepat</b> via WhatsApp & Email</p>
+        <ul class="modal-list">
+          <li>WhatsApp: +62 812-345-6789</li>
+          <li>Email: customercare@scentmall.com</li>
+          <li>IG: @arven.parfume</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="about.js"></script>
+</body>
+</html>

@@ -6,11 +6,11 @@
   <title>Hubungi Kami - SCENTMALL</title>
   <meta name="description" content="Hubungi SCENTMALL untuk pertanyaan atau pemesanan parfum.">
   <link rel="stylesheet" href="stylecontact.css">
-  <!-- ikon (dipakai oleh header) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <div class="logo"><a href="index.html">ARVEN PARFUME</a></div>
     <div class="header-right-nav">
@@ -30,6 +30,7 @@
     </div>
   </header>
 
+  <!-- Konten -->
   <main class="content-section">
     <h1>HUBUNGI KAMI</h1>
     <p>Silakan isi formulir di bawah ini untuk pertanyaan atau pemesanan.</p>
@@ -45,24 +46,28 @@
           <label for="name">Nama Lengkap</label>
           <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" autocomplete="name" required/>
           <small class="field-error" id="err-name" hidden>Nama tidak boleh kosong.</small>
+          <small class="field-ok" id="ok-name" hidden>✓ Sudah diisi.</small>
         </div>
 
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="nama@contoh.com" autocomplete="email" required/>
           <small class="field-error" id="err-email" hidden>Email tidak valid.</small>
+          <small class="field-ok" id="ok-email" hidden>✓ Sudah diisi.</small>
         </div>
 
         <div class="form-group">
           <label for="subject">Subjek</label>
           <input type="text" id="subject" name="subject" placeholder="Judul pesan Anda" required/>
           <small class="field-error" id="err-subject" hidden>Subjek wajib diisi.</small>
+          <small class="field-ok" id="ok-subject" hidden>✓ Sudah diisi.</small>
         </div>
 
         <div class="form-group">
           <label for="message">Pesan</label>
           <textarea id="message" name="message" placeholder="Tulis pesan Anda..." rows="5" required></textarea>
-          <small class="field-error" id="err-message" hidden>Pesan minimal 10 karakter.</small>
+          <small class="field-error" id="err-message" hidden>Pesan wajib diisi.</small>
+          <small class="field-ok" id="ok-message" hidden>✓ Sudah diisi.</small>
         </div>
 
         <button type="submit" class="submit-btn ripple">KIRIM PESAN</button>
